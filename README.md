@@ -5,3 +5,4 @@ top画像がスライドショーになっており、追尾型ヘッダーも�
   
 
 まだまだ慣れてないせいでスパゲッティコードになってますが許して･･･
+https://shinonome-ast.github.io/Coding_Diary_Part_02/
