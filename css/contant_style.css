@@ -1,0 +1,286 @@
+body {
+	margin: 0 auto;
+	width: 100vw;
+	min-height: 100vh;
+	font-family: "Noto Serif JP", "Noto Serif";
+}
+.hamburger {
+	display: none;
+}
+header {
+	position: relative;
+}
+.top-header {
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	background-color: rgba(255, 255, 255, 0);
+	z-index: 20;
+}
+
+.nav-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 35px;
+	padding: 15px 6vw;
+}
+
+.nav-header a {
+	text-decoration: none;
+}
+.logo {
+	color: #fff;
+	padding-left: 2vw;
+	font-size: 1.9vw;
+	font-weight: bold;
+	font-style: italic;
+}
+.nav-menu {
+	display: flex;
+	flex-direction: row;
+}
+.nav-menu li a {
+	list-style: none;
+	text-decoration: none;
+	font-size: 1.3vw;
+	font-weight: bold;
+	font-style: italic;
+	color: #fff;
+	padding-right: 2vw;
+}
+
+.image-item img {
+	width: 100vw;
+}
+.contact-top {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 5.5vw;
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 0.5vw;
+}
+.contact-header p {
+	position: absolute;
+	bottom: 3vh;
+	font-size: 5vw;
+	font-weight: bold;
+	text-align: left;
+	letter-spacing: 0.15vw;
+	margin: 0 0 2vh 5vw;
+	color: rgba(255, 255, 255, 0.1);
+}
+
+aside {
+	letter-spacing: 0.2vw;
+	margin-top: 8vh;
+}
+
+.inquiry-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.inquiry,
+.inquiry-name,
+.inquiry-tel,
+.inquiry-email,
+.inquiry-about {
+	flex: 1;
+	width: 50%;
+	display: inline;
+	margin-top: 3vh;
+	object-position: left;
+	line-height: 1.8;
+}
+
+input,
+textarea {
+	font-size: 1.2vw;
+}
+label {
+	width: 100%;
+	margin: 0;
+}
+
+.inquiry label {
+	padding-right: 2.5vw;
+}
+
+.inquiry-name input,
+.inquiry-tel input,
+.inquiry-email input,
+.inquiry-about textarea {
+	width: 100%;
+}
+
+.btn {
+	width: 15vw;
+	font-size: 1.2vw;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 0.1vw;
+	color: rgb(23, 23, 23);
+	border: 5px solid rgba(23, 23, 23, 0.5);
+	border-radius: 50px;
+	background-color: rgb(247, 212, 63);
+	padding: 1.5vh;
+	margin: 6vh auto;
+}
+
+footer {
+	margin: 2vh 0;
+	font-size: 1vw;
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	.nav-menu {
+		display: none;
+	}
+	/* ハンバーガーメニュー */
+	.hamburger {
+		display: block;
+	}
+	.menu-btn {
+		position: absolute;
+		top: 1vh;
+		right: 6vw;
+		display: flex;
+		height: 5vh;
+		width: 9vw;
+		justify-content: center;
+		align-items: center;
+		z-index: 90;
+		/* background-color: aqua; */
+	}
+	.menu-btn span,
+	.menu-btn span::before,
+	.menu-btn span::after {
+		content: "";
+		display: block;
+		height: 5px;
+		width: 34px;
+		border-radius: 3px;
+		background-color: #ffffff;
+		position: absolute;
+	}
+	.menu-btn span::before {
+		bottom: 12px;
+	}
+	.menu-btn span::after {
+		top: 12px;
+	}
+	#menu-btn-check:checked ~ .menu-btn span {
+		position: fixed;
+		background-color: rgba(255, 255, 255, 0);
+	}
+	#menu-btn-check:checked ~ .menu-btn span::before {
+		bottom: 0;
+		transform: rotate(45deg);
+	}
+	#menu-btn-check:checked ~ .menu-btn span::after {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+	#menu-btn-check:checked ~ .sp-menu {
+		left: 0;
+	}
+	#menu-btn-check {
+		display: none;
+	}
+	.sp-menu {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 100%;
+		z-index: 80;
+		background-color: rgb(40, 47, 53);
+		transition: all 0.3s;
+	}
+	.sp-menu ul {
+		padding: 25vh 25vw 0;
+	}
+	.sp-menu ul li {
+		border-bottom: 0.5vh solid #fff;
+		list-style: none;
+	}
+	.sp-menu ul li a {
+		display: block;
+		width: 100%;
+		font-size: 5vw;
+		font-weight: bold;
+		font-style: italic;
+		letter-spacing: 2px;
+		box-sizing: border-box;
+		color: #fff;
+		text-decoration: none;
+		padding: 5vh 15px 2vh 0;
+		position: relative;
+	}
+	.sp-menu ul li a::before {
+		content: "";
+		width: 12px;
+		height: 12px;
+		border-top: 1vw solid #fff;
+		border-right: 1vw solid #fff;
+		transform: rotate(45deg);
+		position: absolute;
+		right: 2vw;
+		top: 5.5vh;
+	}
+	/* ここまで */
+	.image-item img {
+		display: block;
+		overflow: hidden;
+		object-fit: cover;
+		width: 100%;
+		height: 75vh;
+	}
+	.logo {
+		padding: 0;
+		font-size: 6vw;
+	}
+	.contact-top {
+		font-size: 9.5vw;
+		text-align: center;
+	}
+	.contact-header p {
+		margin: 0;
+		padding: 5vh 0 5vh 3vw;
+		font-size: 10vw;
+		text-align: left;
+	}
+	.inquiry {
+		display: flex;
+		flex-direction: column;
+		width: 85%;
+		font-size: 4vw;
+	}
+	.inquiry-name,
+	.inquiry-tel,
+	.inquiry-email,
+	.inquiry-about {
+		width: 85%;
+	}
+	.btn {
+		width: 50%;
+		height: 40%;
+		padding: 2vh 0;
+		font-size: 3vw;
+	}
+
+	small {
+		font-size: 3.5vw;
+	}
+}
