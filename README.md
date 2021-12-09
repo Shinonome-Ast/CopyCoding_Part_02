@@ -4,5 +4,6 @@
 top画像がスライドショーになっており、追尾型ヘッダーも模写してみました。  
   
 
-まだまだ慣れてないせいでスパゲッティコードになってますが許して･･･
-https://shinonome-ast.github.io/Coding_Diary_Part_02/
+まだまだ慣れてないせいでスパゲッティコードになってますが許して･･･  
+  
+[模写コーディング](https://shinonome-ast.github.io/Coding_Diary_Part_02/)
